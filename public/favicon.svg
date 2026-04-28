@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lyraGrad" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#065F46"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#lyraGrad)"/>
+  <rect x="13" y="13" width="38" height="38" rx="11" fill="#F0FDF4"/>
+  <path d="M22 23V41H30.5V34H40.5V28.4H30.5V23H22Z" fill="#065F46"/>
+  <path d="M43 28L50 23.5V32.5L43 28Z" fill="#10B981"/>
+</svg>

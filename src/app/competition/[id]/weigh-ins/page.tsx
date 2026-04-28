@@ -37,18 +37,18 @@ export default function WeighInsPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
+      <header className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900/40">
+        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
           Capturi
         </h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
           {canManage
-            ? "Poți înregistra capturi noi. Lista se actualizează automat."
+            ? "Poți înregistra capturi noi. Formularul este simplificat pentru arbitri."
             : "Vizualizare istoric capturi. Pentru înregistrare, autentifică-te ca organizator."}
         </p>
-      </div>
+      </header>
 
-        {canManage && competition && (
+      {canManage && competition && (
         <WeighInForm
           competition={competition}
           teams={teams}
@@ -76,7 +76,7 @@ export default function WeighInsPage() {
                 return (
                   <li
                     key={w.id}
-                    className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm dark:border-zinc-800 dark:bg-zinc-950"
+                    className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-zinc-200 bg-white px-4 py-3 text-sm dark:border-zinc-800 dark:bg-zinc-950"
                   >
                     <span className="font-medium text-zinc-900 dark:text-zinc-100">
                       {teamName}

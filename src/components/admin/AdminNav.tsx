@@ -39,7 +39,7 @@ export function AdminNav() {
   return (
     <div className="space-y-4">
       {sections.map((sec) => (
-        <div key={sec.title}>
+        <section key={sec.title}>
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-zinc-500">
             {sec.title}
           </p>
@@ -51,9 +51,9 @@ export function AdminNav() {
                 <Link
                   key={l.href}
                   href={l.href}
-                  className={`rounded-full px-3 py-1.5 text-sm font-medium transition ${
+                  className={`rounded-xl px-3 py-2 text-sm font-semibold transition ${
                     active
-                      ? "bg-emerald-800 text-white shadow"
+                      ? "bg-emerald-700 text-white shadow"
                       : "bg-zinc-100 text-zinc-800 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
                   }`}
                 >
@@ -62,7 +62,7 @@ export function AdminNav() {
               );
             })}
           </nav>
-        </div>
+        </section>
       ))}
     </div>
   );

@@ -83,8 +83,8 @@ export function LeaderboardTable({
   const colCount = competitionType === "combined" ? 8 : 7;
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-      <table className="w-full border-collapse text-sm">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <table className="w-full border-collapse text-sm" aria-label="Clasament concurs">
         <thead>
           <tr className="border-b border-zinc-200 bg-zinc-50/90 text-left text-[11px] font-medium uppercase tracking-widest text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-400">
             <th className="w-11 px-2 py-3 font-medium">Loc sec.</th>

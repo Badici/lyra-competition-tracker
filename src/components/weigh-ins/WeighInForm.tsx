@@ -96,7 +96,7 @@ export function WeighInForm({
 
   return (
     <form
-      className="space-y-4 rounded-xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-950"
+      className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950"
       onSubmit={(e) => {
         e.preventDefault();
         mutation.mutate();
@@ -106,8 +106,8 @@ export function WeighInForm({
         Înregistrare cântărire
       </h3>
       <p className="text-xs text-zinc-500 dark:text-zinc-400">
-        Standul se ia automat din repartizarea echipei; aici alegi doar echipa,
-        specia (crap / țipă), numărul de pești și greutatea totală a cântarului.
+        Completează doar câmpurile de mai jos. Standul este preluat automat din
+        repartizarea echipei pentru a evita greșelile.
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2">
@@ -195,7 +195,7 @@ export function WeighInForm({
           !activeTeamId ||
           !resolveStandIdForTeam(stands, activeTeamId)
         }
-        className="w-full rounded-xl bg-emerald-700 px-4 py-3 text-sm font-semibold text-white shadow hover:bg-emerald-800 disabled:opacity-50 sm:w-auto"
+        className="w-full rounded-xl bg-emerald-700 px-4 py-3 text-sm font-semibold text-white shadow transition hover:bg-emerald-800 disabled:opacity-50 sm:w-auto"
       >
         {mutation.isPending ? "Se salvează…" : "Salvează cântărirea"}
       </button>

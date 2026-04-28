@@ -21,15 +21,17 @@ export default function BrailaPage() {
   }
 
   return (
-    <div className="max-w-lg space-y-4">
-      <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-        Braila
-      </h1>
-      <p className="text-sm text-zinc-600 dark:text-zinc-400">
-        Cel mai mare pește înregistrat pe zi, vizibil pentru toți participanții.
-        Se bazează pe câmpul „cel mai mare pește” sau pe greutățile individuale
-        din cântăriri.
-      </p>
+    <div className="max-w-2xl space-y-4">
+      <header className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900/40">
+        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+          Braila
+        </h1>
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          Cel mai mare pește înregistrat pe zi, vizibil pentru toți participanții.
+          Se bazează pe câmpul „cel mai mare pește” sau pe greutățile individuale
+          din cântăriri.
+        </p>
+      </header>
       <BrailaWidget entries={braila} loading={isLoading} />
     </div>
   );

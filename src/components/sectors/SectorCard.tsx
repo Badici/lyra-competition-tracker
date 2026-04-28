@@ -10,7 +10,7 @@ export function SectorCard({
   entries: LeaderboardEntry[];
 }) {
   return (
-    <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+    <article className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm transition hover:scale-[1.03] hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950">
       <header className="mb-3 flex items-center justify-between gap-2">
         <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-50">
           {sector.name}

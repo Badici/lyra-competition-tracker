@@ -22,7 +22,7 @@ export function BrailaWidget({
   const latest = entries[0];
 
   return (
-    <div className="rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-4 shadow-sm dark:border-amber-900/50 dark:from-amber-950/40 dark:to-zinc-950">
+    <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-5 shadow-sm dark:border-amber-900/50 dark:from-amber-950/40 dark:to-zinc-950">
       <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-900 dark:text-amber-200">
         Braila
       </h3>

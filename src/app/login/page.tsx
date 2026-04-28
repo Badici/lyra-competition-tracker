@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { LoginForm } from "./LoginForm";
 import { Skeleton } from "@/components/ui/Skeleton";
+
+export const metadata: Metadata = {
+  title: "Autentificare",
+  description:
+    "Conectare securizată pentru organizatori și arbitri, cu acces rapid la administrarea concursurilor.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 function LoginFallback() {
   return (

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { queryKeys } from "@/lib/queryKeys";
 
 export function LoginForm() {
@@ -44,13 +45,16 @@ export function LoginForm() {
 
   return (
     <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center px-4 py-12">
-      <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
-        <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-          Autentificare
+      <div className="mb-3 flex justify-end">
+        <ThemeToggle />
+      </div>
+      <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
+        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+          Conectare organizator/arbitru
         </h1>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Introdu credențialele primite de la organizator. Token-ul este păstrat
-          securizat (cookie HttpOnly).
+          Introdu datele primite de la organizator. După conectare, poți gestiona
+          concursurile și cântăririle.
         </p>
         <form className="mt-6 space-y-4" onSubmit={onSubmit}>
           <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
@@ -82,7 +86,7 @@ export function LoginForm() {
           <button
             type="submit"
             disabled={pending}
-            className="w-full rounded-xl bg-emerald-700 py-3 text-sm font-semibold text-white shadow hover:bg-emerald-800 disabled:opacity-50"
+            className="w-full rounded-xl bg-emerald-700 py-3 text-sm font-semibold text-white shadow transition hover:bg-emerald-800 disabled:opacity-50"
           >
             {pending ? "Se conectează…" : "Conectare"}
           </button>

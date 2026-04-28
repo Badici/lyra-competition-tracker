@@ -36,9 +36,17 @@ export function TeamsView() {
 
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-        Echipe
-      </h1>
+      <header className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900/40">
+        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+          Echipe
+        </h1>
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          Vezi componența echipelor și performanța curentă în concurs.
+        </p>
+        <p className="mt-3 text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          Total echipe: {sorted.length}
+        </p>
+      </header>
       <div className="grid gap-4 sm:grid-cols-2">
         {sorted.map((t) => (
           <div

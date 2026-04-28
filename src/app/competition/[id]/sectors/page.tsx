@@ -32,13 +32,14 @@ export default function SectorsPage() {
 
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-        Sectoare
-      </h1>
-      <p className="text-sm text-zinc-600 dark:text-zinc-400">
-        Clasament pe sector; finalul poate compara câștigătorii de sector dacă
-        opțiunea este activată la concurs.
-      </p>
+      <header className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900/40">
+        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+          Sectoare
+        </h1>
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          Clasamente pe fiecare zonă, pentru organizatori și participanți.
+        </p>
+      </header>
       <div className="grid gap-4 sm:grid-cols-2">
         {sortedSectors.map((s) => (
           <SectorCard
